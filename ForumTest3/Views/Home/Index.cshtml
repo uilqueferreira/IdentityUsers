@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@using Microsoft.AspNetCore.Identity
+@using ForumTest3.Areas.Identity.Data
+
+@inject SignInManager<ApplicationUsers> SignInManager
+@inject UserManager<ApplicationUsers> UserManager
+
+<div class="text-center">
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <h1 class="display-4">Welcome</h1>
+    }
+</div>
